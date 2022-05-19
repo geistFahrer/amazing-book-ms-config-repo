@@ -6,7 +6,7 @@ spring:
     name: oauth-server
   cloud:
     config:
-      uri: http://localhost:8070
+      uri: http://host.docker.internal:8070
 
 eureka:
   client:
