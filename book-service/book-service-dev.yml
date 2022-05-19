@@ -8,10 +8,6 @@ message: "Hello from book-test-service"
 spring:
   application:
     name: book-service
-  profiles:
-    active:
-    - dev
-    - prod
   cloud:
     config:
       enabled: true
