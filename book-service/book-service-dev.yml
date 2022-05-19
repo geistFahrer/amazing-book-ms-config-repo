@@ -4,3 +4,7 @@ server:
   port: 8888
 
 message: "Hello from book-test-service"
+
+spring:
+  application:
+    name: book-service
