@@ -6,5 +6,3 @@ server:
 spring:
   application:
     name: book-service
-  profiles:
-    active: dev, prod
