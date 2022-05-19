@@ -2,8 +2,6 @@ server:
   servlet:
     context-path: /bookms
   port: 8777
-
-message: "Hello from book-test-service" 
   
 spring:
   application:
@@ -56,4 +54,3 @@ security:
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
-     
