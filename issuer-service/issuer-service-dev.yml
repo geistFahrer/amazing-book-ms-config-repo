@@ -1,17 +1,15 @@
 server:
   servlet:
-    context-path: /bookms
-  port: 8010
-
-message: "Hello from book-prod-service" 
+    context-path: /issuerms
+  port: 8020
+  
   
 spring:
   application:
-    name: book-service
+    name: issuer-service
   cloud:
     config:
       uri: http://host.docker.internal:8070
-
   datasource:
     url: jdbc:h2:mem:books-db
     username: booksapp
@@ -25,9 +23,7 @@ management:
     web:
       exposure:
         include: "*"
-      health:
-        show-details: always  
-
+        
 eureka:
   client:
     register-with-eureka: true
@@ -47,8 +43,10 @@ security:
       client-secret: 123456
       grant-type: client_credentials
       scope: read
-      
+
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
-     
+    
+bookms:
+  baseUrl: http://book-service/bookms/books/
