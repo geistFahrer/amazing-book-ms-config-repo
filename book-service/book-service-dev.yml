@@ -8,3 +8,18 @@ message: "Hello from book-test-service"
 spring:
   application:
     name: book-service
+  profiles:
+    active: dev
+  config: 
+    import : "optional:configserver:"
+  cloud:
+    config:
+      uri: http://localhost:8070
+
+  datasource:
+    url: jdbc:h2:mem:books-db
+    username: booksapp
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
