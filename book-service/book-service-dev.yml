@@ -1,7 +1,7 @@
 server:
   servlet:
     context-path: /bookms
-  port: 8010
+  port: 8013
 
 message: "Hello from book-test-service" 
   
